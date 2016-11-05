@@ -6,7 +6,7 @@ describe('app', function () {
         var config = configurator('el-1', {
             innerHeight: 100,
             innerWidth: 100
-        }, 'foo.png', 'left');
+        }, 'foo.png', 'left')();
         chai.assert(config.image === 'foo.png');
     });
 });

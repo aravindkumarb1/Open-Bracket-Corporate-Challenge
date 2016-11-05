@@ -1,11 +1,14 @@
 var THREE = require('three-js')();
 require('./device-orientation-controls.js')(THREE);
 
-module.exports = function(config) {
+module.exports = function(configurator) {
 
-    var container, camera, scene, renderer, controls;
+    var container, camera, scene, renderer, controls, config;
+
+    config = configurator();
 
     var animate = function(){
+        config = configurator();
         window.requestAnimationFrame( animate );
         controls.update();
         renderer.render(scene, camera);
@@ -38,9 +41,12 @@ module.exports = function(config) {
     container.appendChild(renderer.domElement);
 
     window.addEventListener('resize', function() {
+        config = configurator();
         camera.aspect = config.width / config.height;
         camera.updateProjectionMatrix();
         renderer.setSize( config.width, config.height );
+        renderer.domElement.style.top = parseInt(config.position.top) + 'px';
+        renderer.domElement.style.left = parseInt(config.position.left) + 'px';
     }, false);
 
     animate();
