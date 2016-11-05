@@ -40,6 +40,14 @@ module.exports = function(configurator) {
     renderer.domElement.style.left = parseInt(config.position.left) + 'px';
     container.appendChild(renderer.domElement);
 
+    var element = document.createElement( 'img' );
+    element.src = '/assets/chcs.svg';
+    element.style.position = 'absolute';
+    element.style.top = 0;
+    element.style.left = parseInt(config.position.left) + 'px';
+    element.style.margin = '2px';
+    container.appendChild(element);
+
     window.addEventListener('resize', function() {
         config = configurator();
         camera.aspect = config.width / config.height;
