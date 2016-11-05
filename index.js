@@ -1,22 +1,8 @@
-var panorama = require('./js/panorama.js');
+var configurator = require('./js/configurator.js'),
+    panorama = require('./js/panorama.js');
 
 window.addEventListener('load', function() {
-   panorama({
-      elementId: 'vp-l',
-      width: window.innerWidth/2,
-      height: window.innerHeight,
-      position: {
-         top: 0,
-         left: 0
-      }
-   });
-   panorama({
-      elementId: 'vp-r',
-      width: window.innerWidth/2,
-      height: window.innerHeight,
-      position: {
-         top: 0,
-         left: window.innerWidth/2
-      }
-   });
+   var img = '/assets/pan_2.jpg';
+   panorama(configurator('vp-l', window, img, 'left'));
+   panorama(configurator('vp-r', window, img, 'right'));
 });

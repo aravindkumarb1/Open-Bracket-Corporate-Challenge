@@ -23,7 +23,7 @@ module.exports = function(config) {
     geometry.scale( - 1, 1, 1 );
 
     var material = new THREE.MeshBasicMaterial( {
-        map: new THREE.TextureLoader().load( '/assets/pan_1.jpg' )
+        map: new THREE.TextureLoader().load( config.image )
     } );
 
     var mesh = new THREE.Mesh( geometry, material );
