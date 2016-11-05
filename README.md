@@ -6,3 +6,13 @@ Barclaycard Christiana Care Scheduling App
 We are asking that the Corporation Select the Google Card Board Challenge, but you are welcome to attempt any of the problem sets, included in this repo.
 
 When you are ready to get started, simply fork the repository , and enjoy coding!
+
+## How to run
+
+```bash
+npm install
+npm run serve
+```
+
+Go to http://localhost:3000
+
