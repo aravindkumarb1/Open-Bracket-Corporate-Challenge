@@ -1,3 +1,4 @@
+var pkg = require('./../package.json');
 module.exports = function (elementId, viewport, img, position) {
     return function() {
         return {
@@ -8,7 +9,9 @@ module.exports = function (elementId, viewport, img, position) {
                 top: 0,
                 left: position === 'left' ? 0 : viewport.innerWidth / 2
             },
-            image: img
+            image: img,
+            displayInfo: position === 'left',
+            description: pkg.description + ' - ' + pkg.version
         };
     };
 };

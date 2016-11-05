@@ -1,7 +1,7 @@
 {
   "name": "bcus-christiana-vr",
   "version": "1.0.0",
-  "description": "Barclaycard Christiana Care Scheduling App ========",
+  "description": "Christiana Care Patient Relaxation",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha --reporter spec",
