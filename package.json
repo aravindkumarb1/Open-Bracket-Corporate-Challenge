@@ -1,11 +1,11 @@
 {
   "name": "bcus-christiana-vr",
   "version": "1.0.0",
-  "description": "Barclaycard Christiana Care Scheduling App ========",
+  "description": "Christiana Care Patient Relaxation",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha --reporter spec",
-    "build": "browserify index.js -o dist/index.js -t [ babelify --presets [ es2015 ] ]",
+    "build": "mkdir -p ./dist && browserify index.js -o dist/index.js -t [ babelify --presets [ es2015 ] ]",
     "serve": "npm run build && node server.js"
   },
   "author": "",
@@ -18,5 +18,8 @@
     "chai": "^3.5.0",
     "express": "^4.14.0",
     "mocha": "^3.1.2"
+  },
+  "dependencies": {
+    "three-js": "^79.0.0"
   }
 }
